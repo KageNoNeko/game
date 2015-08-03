@@ -1,0 +1,12 @@
+{
+  "name": "canvas-game-sandbox",
+  "description": "A game development sandbox",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "bootstrap": "3.3.x",
+    "angular-ui-router": "0.2.x",
+    "angular-bootstrap": "0.13.x"
+  }
+}
