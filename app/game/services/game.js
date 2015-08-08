@@ -18,8 +18,8 @@
     game.provider('game.Game', [
         function gameProvider() {
             this.$get = [
-                '$q', '$$rAF', 'game.Field',
-                function game($q, $$rAF, Field) {
+                '$q', 'game.Field',
+                function game($q, Field) {
                     var lastTime;
                     function render() {
                         var elm = Field.getElement(),
@@ -35,13 +35,11 @@
                          render();
 
                         lastTime = now;
-                        console.log(lastTime);
-                        //$$rAF(frame); // why rAF do not work?
                         requestAnimationFrame(frame);
                     }
                     return {
                         'launch': function () {
-                            $q.all([Field.ready()/*resources*/])
+                            return $q.all([Field.ready()/*resources*/])
                                 .then(function () {
                                     frame();
                                 });

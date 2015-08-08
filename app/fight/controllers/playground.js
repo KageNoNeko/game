@@ -1,10 +1,10 @@
-/* app.Game Controller */
+/* fight.Playground Controller */
 (function () {
     'use strict';
 
-    var app = angular.module('app');
+    var fight = angular.module('fight');
 
-    app.controller('app.Game', [
+    fight.controller('fight.Playground', [
         'game.Game',
         function (Game) {
             Game.launch();

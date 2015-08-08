@@ -1,19 +1,19 @@
-/* app Module */
+/* fight Main Module */
 (function () {
     'use strict';
 
-    var app = angular.module('app', ['ui.router', 'game']);
+    var fight = angular.module('fight', ['ui.router', 'game']);
 
-    app.config([
+    fight.config([
         '$stateProvider', '$urlRouterProvider',
         function($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise("/");
 
             $stateProvider
-                .state('game', {
+                .state('play', {
                     url: "/",
-                    controller: 'app.Game',
-                    templateUrl: "/app/view/game.html"
+                    controller: 'fight.Playground',
+                    templateUrl: "/fight/view/playground.html"
                 })
                 .state('constructionSet', {
                     url: "/cs",
